@@ -1,0 +1,27 @@
+{
+    "name": "cvek/workflow",
+    "description": "Component to add workflow/state machine feature",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Logachev",
+            "email": "serg@baitek.org"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "symfony/config": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/http-kernel": "^4.0"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cvek\\WorkflowBundle\\": "src/"
+        }
+    }
+}

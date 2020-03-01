@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-namespace Cvek\WorkflowBundle\Exception;
+namespace Cvek\WorkflowBundle\Message;
 
 final class TransitionErrorMessage
 {

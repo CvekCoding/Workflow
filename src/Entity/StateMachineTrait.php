@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the Diningedge package.
+ * This file is part of the Cvek package.
  *
  * (c) Sergey Logachev <svlogachev@gmail.com>
  *
@@ -8,34 +8,25 @@
  * file that was distributed with this source code.
  */
 
-namespace Cvek\WorkflowBundle\Entity;
+ namespace Cvek\WorkflowBundle\Entity;
 
-trait StateMachineTrait
-{
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(type="string")
-     */
-    private ?string $state = null;
-
-    /**
-     * @return string
-     */
-    public function getState(): ?string
-    {
-        return $this->state;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return StateMachineTrait
-     */
-    public function setState(string $state): self
-    {
-        $this->state = $state;
-
-        return $this;
-    }
-}
+ use Doctrine\ORM\Mapping\Column;
+ 
+ trait StateMachineTrait
+ {
+     #[Column(type: 'string')]
+     private ?string $state = null;
+ 
+     public function getState(): ?string
+     {
+         return $this->state;
+     }
+ 
+     public function setState(string $state): self
+     {
+         $this->state = $state;
+ 
+         return $this;
+     }
+ }
+ 
